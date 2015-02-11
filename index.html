@@ -22,7 +22,7 @@
 
 <input type="text" data-ng-model="search">
 <center><div data-ng-controller="tutorialsCtrl">
-<table id="table">
+<table id="table" class="table table-striped">
         <thead>
                 <tr>
                         <th>Image</th>
@@ -32,7 +32,7 @@
                 </tr>
         </thead>
         <tbody>
-                <tr data-ng-repeat="informative in informatives"
+                <tr data-ng-repeat="informative in informatives">
                         <td><img ng-src="{{informative.image}}" /></td>
                         <td>{{informative.title}}</td>
                         <td>{{informative.author}}</td>
