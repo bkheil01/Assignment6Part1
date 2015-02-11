@@ -1,5 +1,5 @@
-var app = angular.module("TutorialsApp", []);
-var obj = JSON.parse("tutorials.json");
+var app = angular.module("TutorialsApp", []),
+ obj = JSON.parse("tutorials.json");
 app.service("tutorialsService", function($http, $q)
 {
   var deferred = $q.defer();
