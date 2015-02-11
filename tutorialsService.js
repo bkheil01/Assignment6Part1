@@ -3,12 +3,12 @@ var app = angular.module("TutorialsApp", []);
 app.service("tutorialsService", function($http, $q)
 {
   var deferred = $q.defer();
-  $http.get('Assignment6/Tutorials.json').then(function (data)
+  $http.get("tutorials.json").then(function (data)
   {
     deferred.resolve(data);
   });
 
-  this.getTutorials = function ()
+  this.getInformatives = function ()
   {
     return deferred.promise;
   }
@@ -16,9 +16,10 @@ app.service("tutorialsService", function($http, $q)
 
 .controller("tutorialsCtrl", function ($scope, tutorialsService)
 {
-  var promise = tutorialsService.getTutorials();
+  var promise = tutorialsService.getInformatives();
   promise.then(function (data)
   {
-    $scope.tutorial = data;
-    console.log($scope.tutorial);
+    $scope.informatives = data.data;
+    console.log($scope.informatives);
+  });
 })
