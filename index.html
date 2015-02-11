@@ -23,10 +23,12 @@
 <div data-ng-controller="tutorialsCtrl">
 <center><table class="table table-striped">
         <thead>
-                <th>Image</th>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Link</th>
+                <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Link</th>
+                </tr>
         </thead>
         <tbody>
                 <tr data-ng-repeat="informative in informatives" | filter:search | orderBy:'title'>
