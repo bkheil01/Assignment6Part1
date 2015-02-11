@@ -6,31 +6,12 @@
         <meta name = "viewport" content="width=device-width, initial-scale=1.0"
        
        	<link rel="stylesheet" href="css/bootstrap.min.css">
-<style>
-table.table thead .sorting,
-table.table thead .sorting_asc,
-table.table thead .sorting_desc,
-table.table thead .sorting_asc_disabled,
-table.table thead .sorting_desc_disabled {
-    cursor: pointer;
-    *cursor: hand;
-}
- 
-table.table thead .sorting { background: url('images/sort_both.png') no-repeat center right; }
-table.table thead .sorting_asc { background: url('images/sort_asc.png') no-repeat center right; }
-table.table thead .sorting_desc { background: url('images/sort_desc.png') no-repeat center right; }
- 
-table.table thead .sorting_asc_disabled { background: url('images/sort_asc_disabled.png') no-repeat center right; }
-table.table thead .sorting_desc_disabled { background: url('images/sort_desc_disabled.png') no-repeat center right; }
-</style>
 
 </head>
 <body>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
         <script src="tutorialsService.js"></script>
 
-
-        
 <div class="mainContainer" data-ng-app="TutorialsApp">
 
 <div class="jumbotron">
@@ -39,7 +20,7 @@ table.table thead .sorting_desc_disabled { background: url('images/sort_desc_dis
 
 <input type="text" data-ng-model="search">
 <div data-ng-controller="tutorialsCtrl">
-<table &lt;table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="table"&gt;>
+<table id="table">
         <thead>
                 <tr>
                         <th>Image</th>
@@ -60,7 +41,7 @@ table.table thead .sorting_desc_disabled { background: url('images/sort_desc_dis
 </div>
 </div>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+        <script type="text/javascript" src="jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="table.js"></script>
 </body>
 </html>
