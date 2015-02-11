@@ -20,6 +20,6 @@ app.service("tutorialsService", function($http, $q)
   promise.then(function (data)
   {
     $scope.informatives = JSON.parse(data.data);
-    console.log($scope.informatives);
+
   });
 })
