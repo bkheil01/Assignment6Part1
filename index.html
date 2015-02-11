@@ -23,7 +23,7 @@
         </thead>
         <tbody>
                 <tr data-ng-repeat="informative in informatives | filter:search | orderBy:'title'">
-                        <td>{{informative.image}}</td>
+                        <td><img ng-src="{{informative.image}}" /></td>
                         <td>{{informative.title}}</td>
                         <td>{{informative.author}}</td>
                         <td>{{informative.url}}</td>
