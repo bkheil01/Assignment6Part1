@@ -1,9 +1,9 @@
-var app = angular.module("TutorialsApp", []),
- obj = JSON.parse("tutorials.json");
+var app = angular.module("TutorialsApp", []);
+
 app.service("tutorialsService", function($http, $q)
 {
   var deferred = $q.defer();
-  $http.get("obj").then(function (data)
+  $http.get("tutorials.json").then(function (data)
   {
     deferred.resolve(data);
   });
@@ -19,7 +19,7 @@ app.service("tutorialsService", function($http, $q)
   var promise = tutorialsService.getInformatives();
   promise.then(function (data)
   {
-    $scope.informatives = data.data;
+    $scope.informatives = JSON.parse(data.data);
     console.log($scope.informatives);
   });
 })
