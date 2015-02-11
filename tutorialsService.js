@@ -1,9 +1,9 @@
 var app = angular.module("TutorialsApp", []);
-
+var obj = JSON.parse(tutorials.json);
 app.service("tutorialsService", function($http, $q)
 {
   var deferred = $q.defer();
-  $http.get("tutorials.json").then(function (data)
+  $http.get("obj").then(function (data)
   {
     deferred.resolve(data);
   });
