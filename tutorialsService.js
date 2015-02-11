@@ -19,7 +19,7 @@ app.service("tutorialsService", function($http, $q)
   var promise = tutorialsService.getInformatives();
   promise.then(function (data)
   {
-    $scope.informatives = JSON.parse(data.data);
-
+    $scope.informatives = data.data;
+    console.log($scope.informatives);
   });
 })
